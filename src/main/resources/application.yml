@@ -1,0 +1,10 @@
+#服务端口
+server:
+  port: 6666
+
+# 应用名称
+spring:
+  application:
+    name: springboot-spi-test
+
+
