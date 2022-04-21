@@ -1,3 +1,3 @@
-#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-#  com.wzy.spi.service.Search.DatabaseSearch,\
-#  com.wzy.spi.service.Search.FileSearch
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.wzy.spi.annotation.PrintTestConfiguration,\
+  com.wzy.spi.service.impl.DatabaseSearchTest

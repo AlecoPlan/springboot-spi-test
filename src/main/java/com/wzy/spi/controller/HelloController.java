@@ -1,7 +1,11 @@
 package com.wzy.spi.controller;
 
 import com.demo.Print;
-import com.wzy.spi.service.Search;
+import com.demo.service.impl.Search;
+import com.wzy.spi.annotation.PrintTest;
+import com.wzy.spi.service.SearchTest;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,12 +18,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
 
+    @Autowired
     private Search search;
+
+    @Autowired
+    private SearchTest searchTest;
 
     @GetMapping("/hello")
     @Print
+    @PrintTest
     public String hello(){
-//        this.search.search();
+        search.search();
+        searchTest.searchTest();
         return "Hello world";
     }
 }
